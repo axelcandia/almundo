@@ -5,5 +5,6 @@ angular
 'appRoutes', 
 'HotelCtrl',  
 'HotelService',
-'HotelListComponent'
+'HotelListComponent',
+'SearchFilterComponent'
 ]);
