@@ -9,4 +9,41 @@ html, body
 .background-body{
     background-color: #f4f4f4;
     height: 100%;
+    padding-top: 24px;  
+}
+
+/*Filters*/
+.homeContainer.row{
+    margin-left: 0px;
+}
+#filters-container .card{
+    background: white;
+    border-radius: 0px;
+    margin-bottom: 6px;
+    box-shadow: 1px 1px #dddd;
+} 
+
+/*price*/
+.price{
+    margin-top: 20px;
+}
+.price span{
+    font-size: 12px;
+}
+.price .card-text{
+    color:#e99041;
+    font-size:21px;
+}
+.price .card-text strong{
+    font-size: 32px;
+}
+
+/*Hotel description*/
+.hotel-description{
+    border-right:1px dotted #dddd;
+}
+.hotel-description p{
+    color:#7eb8d6;
+    font-size:14px;
+    margin-top:5px;
 }

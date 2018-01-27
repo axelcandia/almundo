@@ -7,9 +7,7 @@ app.set('view engine', 'pug')
  
 
 // Load the routes ("controllers" -ish) 
-app.use('/api', require('./app/customers/router'))  
-
-
+app.use('/api', require('./app/hotel/hotel.server.route'))  
 
 //This is for the frontend
 app.get('*', function(req, res) {

@@ -1,9 +1,9 @@
-<div class="row">
-    <div class="col-md-3 col-xs-12">
+<div class="homeContainer row">
+    <div class="col-sm-12 col-md-3">
         <search-filter></search-filter>
     </div>
-    <div class="col-md-9 col-xs-12 ">
-        <hotel-list></hotel-list>
+    <div class="col-sm-12  col-md-9 " >
+        <hotel-list ng-repeat="(key, hotel) in hotels" hotel="hotel"></hotel-list>
     </div>
 </div>
             

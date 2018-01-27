@@ -3,10 +3,10 @@ angular
     .factory('Hotel', ['$http', function($http) {
     return {
         // call to get all nerds
-        get : function() {
+        get : function(input) {
             var req= {
                 method: 'GET',
-                url: '/api/nerds',
+                url: '/api/hotel',
                 data: input
             };
             return $http(req);

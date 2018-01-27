@@ -1,11 +1,8 @@
 angular
     .module('HotelListComponent', [])
     .component('hotelList', {
-        templateUrl: 'views/hotelList.html',
-        controller: function GroupController(){
-          this.innerProp = "inner";
-          },
+        templateUrl: 'views/hotelList.html', 
         bindings: {
-          hero: '='
+          hotel: '='
         }
       });
