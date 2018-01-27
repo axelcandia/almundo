@@ -1,7 +1,9 @@
-angular.module('almundoApp', 
+angular
+.module('almundoApp', 
 [
 'ngRoute', 
 'appRoutes', 
 'HotelCtrl',  
-'HotelService'
+'HotelService',
+'HotelListComponent'
 ]);
