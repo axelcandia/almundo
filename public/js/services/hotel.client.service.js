@@ -7,7 +7,7 @@ angular
             var req= {
                 method: 'GET',
                 url: '/api/hotel',
-                data: input
+                params: input
             };
             return $http(req);
         }, 
