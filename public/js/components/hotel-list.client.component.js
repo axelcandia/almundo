@@ -10,7 +10,7 @@ angular
 function hotelListController () { 
   var $ctrl = this; 
   
-  $ctrl.getStars = function(num) {
+  $ctrl.getStars = function() {
     return new Array($ctrl.hotel.stars);   
-}
+  }
 }

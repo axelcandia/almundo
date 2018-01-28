@@ -22,6 +22,19 @@ html, body
     margin-bottom: 6px;
     box-shadow: 1px 1px #dddd;
 } 
+#filters-container .card-header{
+    background: white;
+}
+
+[data-toggle="collapse"] i:before{   
+    content: "\f139";
+  }
+  
+  [data-toggle="collapse"].collapsed i:before{
+    content: "\f13a";
+  }
+
+
 
 /*price*/
 .price{
@@ -43,9 +56,12 @@ html, body
     border-right:1px dotted #dddd;
 }
 .hotel-description p{
-    color:#7eb8d6;
+    color:#0679b3;
     font-size:14px;
     margin-top:5px;
+}
+.titles-color{
+    color:#0679b3;
 }
 .card{
     margin-bottom: 26px;
@@ -60,4 +76,10 @@ html, body
 .icon{
     height: 24px;
     margin-right: 7px;
+}
+
+/*General*/
+.dark-blue{
+    background-color: #002979;
+    border-color:#002979;
 }
