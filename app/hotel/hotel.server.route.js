@@ -4,9 +4,14 @@ var data      = require("./data.json");
 
 
 function getHotels (req, res) {
-   var filter = data.filter(function(hotel){
-    return hasName(hotel.name,req.query.hotelName) && hasStars(hotel.stars,req.query.stars);
-   })
+  filter=data;
+  //If it has filter then filter, else its unnnecesary
+  if( starHasContent(req.query.stars) || req.query.hotelName){
+     filter = data.filter(function(hotel){
+      return hasName(hotel.name,req.query.hotelName) && hasStars(hotel.stars,req.query.stars);
+     }) 
+  }
+  
     res.json(filter); 
 }
 
@@ -16,13 +21,21 @@ function hasName(hotel,name){
 }
 
 function hasStars(hotel,stars){ 
-  stars=JSON.parse(stars);
-  
-  if(stars["0"]==true || Object.keys(stars).length == 0 ){
+  stars=JSON.parse(stars);  
+  if(stars["0"]==true || Object.keys(stars).length == 0 || !starHasContent(stars)){
     return true;
-  }else{  
+  }else{   
     return stars[String(hotel)];
   }
+}
+/**
+ * If all the stars are on false, then return false
+ */
+function starHasContent(stars){ 
+  for(number in stars){ 
+    if(stars[number]) return true;
+  }
+  return false;
 }
 
 function createCustomer (req, res) {

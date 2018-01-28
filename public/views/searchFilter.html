@@ -1,58 +1,54 @@
 <div id="filters-container">
     <div class="card">
-      <div class="card-header" id="headingOne">
-        <h5 class="mb-0"> 
-          Filtros
-        </h5>
-      </div> 
+       <div class="card-header" id="headingOne">
+          <h5 class="mb-0" data-toggle="collapse" data-target="#allFilters">
+             Filtros
+          </h5>
+       </div>
+       <div id="allFilters">
+          <!--Hotel Name-->
+          <div class="card">
+             <div class="card-header" id="headingTwo">
+                <h5 class="mb-0 form-inline ">
+                   <i class="material-icons icon titles-color">search</i>
+                   <button class="btn btn-link collapsed titles-color " data-toggle="collapse" data-target="#hotelName" aria-expanded="false" aria-controls="collapseTwo">
+                   Nombre del hotel
+                   </button>
+                </h5>
+             </div>
+             <div id="hotelName" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body row">
+                   <input class="form-control col-sm-7 col-md-7 ml-3" ng-model="$ctrl.filters.hotelName" placeholder="Ingrese el nombre del hotel">
+                   <input class="btn btn-primary col-sm-3 col-md-3 ml-3 dark-blue" type="button" value="Aceptar" ng-click="$ctrl.onSearch()">
+                </div>
+             </div>
+          </div>
+          <!--Stars -->
+          <div class="card">
+             <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                   <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                   Estrellas
+                   </button>
+                </h5>
+             </div>
+             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                   <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="0" ng-model="$ctrl.filters.stars[0]" ng-click="$ctrl.onSearch()">
+                      <label class="form-check-label" for="defaultCheck1">
+                      Todas las estrellas
+                      </label>
+                   </div>
+                   <div class="form-check" ng-repeat="(key,star) in $ctrl.getStars(5) track by $index">
+                      <input class="form-check-input" type="checkbox" ng-model="$ctrl.filters.stars[5-$index]" ng-click="$ctrl.onSearch()" value="{{5-$index}}">
+                      <label class="form-check-label">
+                      <i class="material-icons star" ng-repeat="star in $ctrl.getStars(5-$index) track by $index">star</i>
+                      </label>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
     </div>
-    <!--Hotel Name-->
-    <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h5 class="mb-0 form-inline ">
-          <i class="material-icons icon titles-color">search</i>
-          <button class="btn btn-link collapsed titles-color " data-toggle="collapse" data-target="#hotelName" aria-expanded="false" aria-controls="collapseTwo">
-               Nombre del hotel
-          </button>
-        </h5>
-      </div>
-      <div id="hotelName" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-        <div class="card-body row">
-          <input class="form-control col-sm-7 col-md-7 ml-3"  ng-model="$ctrl.filters.hotelName" placeholder="Ingrese el nombre del hotel"></input>
-          <input class="btn btn-primary col-sm-3 col-md-3 ml-3 dark-blue" 
-                  type="button" value="Aceptar" ng-click="$ctrl.onSearch()">
-        </div>
-      </div>
-    </div>
-    <!--Stars -->
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Estrellas
-          </button>
-        </h5>
-      </div>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-        <div class="card-body">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="0"  ng-model="$ctrl.filters.stars[0]"  ng-click="$ctrl.onSearch()">
-                <label class="form-check-label" for="defaultCheck1">
-                  Todas las estrellas
-                </label>
-              </div>
-            
-            <div class="form-check"  ng-repeat="(key,star) in $ctrl.getStars(5) track by $index">
-                <input  class="form-check-input"
-                        type="checkbox"
-                        ng-model="$ctrl.filters.stars[5-$index]"
-                        ng-click="$ctrl.onSearch()"
-                        value="{{5-$index}}">
-                <label class="form-check-label">
-                    <i class="material-icons star" ng-repeat="star in $ctrl.getStars(5-$index) track by $index">star</i>
-                </label>
-              </div>
-        </div>
-      </div>
-    </div>
-  </div>
+ </div>
