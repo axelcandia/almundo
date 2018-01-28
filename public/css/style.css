@@ -47,3 +47,17 @@ html, body
     font-size:14px;
     margin-top:5px;
 }
+.card{
+    margin-bottom: 26px;
+}
+.star{
+    color:#ffbb00;
+}
+.icons-cointaner{
+    margin-left: 13px;
+    margin-top: 12px;
+}
+.icon{
+    height: 24px;
+    margin-right: 7px;
+}

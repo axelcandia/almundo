@@ -7,6 +7,14 @@
                 <div class="card-block px-3">
                     <p><strong>{{$ctrl.hotel.name}}</strong></h4> 
                 </div>
+                <div class="form-inline icons-cointaner"> 
+                    <i class="material-icons star" ng-repeat="star in $ctrl.getStars() track by $index">star</i>
+                </div>
+                <div class="form-inline icons-cointaner"> 
+                    <img ng-repeat="amenity in $ctrl.hotel.amenities track by $index" 
+                         src="/img/icons/amenities/{{amenity}}.svg"
+                         class="icon"></img>
+                </div>
             </div>
             <div class="col-md-3 col-xs-12 px-2 text-center price">
                     <div class="card-block px-3">
