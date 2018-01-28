@@ -53,6 +53,7 @@ body {
 /*price*/
 .price{
     margin-top: 20px;
+    min-height: 176px;
 }
 .price span{
     font-size: 12px;
