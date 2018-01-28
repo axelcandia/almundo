@@ -12,5 +12,5 @@ function hotelListController () {
   
   $ctrl.getStars = function() {
     return new Array($ctrl.hotel.stars);   
-  }
+  } 
 }

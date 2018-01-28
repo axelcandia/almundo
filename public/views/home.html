@@ -1,6 +1,6 @@
 <div class="homeContainer row">
     <div class="col-sm-12 col-md-3">
-        <search-filter></search-filter>
+        <search-filter filters="filters" on-search="getHotels()"></search-filter>
     </div>
     <div class="col-sm-12 col-md-8" >
         <hotel-list ng-repeat="(key, hotel) in hotels" hotel="hotel"></hotel-list>

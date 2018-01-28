@@ -4,13 +4,16 @@ angular
         templateUrl: 'views/searchFilter.html',
         controller: searchFilterController,
         bindings: {
-          hero: '='
+          filters: '=',
+          onSearch:"&"
         }
       });
 function searchFilterController () { 
-  var $ctrl = this;  
+  var $ctrl = this; 
   //This function is equal to the one of hotel-list.component because of lack of time wasnt able to create helper for both 
   $ctrl.getStars = function(index) {
     return new Array(index);   
-  }
+  }  
+   
+
 }
