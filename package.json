@@ -1,6 +1,6 @@
 {
-  "name": "Demo",
-  "version": "0.0",
+  "name": "Demo", 
+  "version":"1.2.3",
   "description": "This is a basic proyect test",
   "scripts": {
     "test": "./bin/test.sh",
