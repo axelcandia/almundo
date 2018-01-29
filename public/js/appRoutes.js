@@ -6,7 +6,7 @@ angular.module('appRoutes', [])
 
         // home page
         .when('/', {
-            templateUrl: 'views/home.html',
+            templateUrl: 'views/hotel.html',
             controller: 'HotelController'
         }) 
 
